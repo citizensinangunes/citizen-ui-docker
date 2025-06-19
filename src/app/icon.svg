@@ -1,0 +1,9 @@
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="32" height="32" fill="white"/>
+  <!-- Left triangle -->
+  <path d="M7 20L4 15L10 15L7 20Z" fill="#004AAD"/>
+  <!-- Right triangle -->  
+  <path d="M25 20L22 15L28 15L25 20Z" fill="#004AAD"/>
+  <!-- Center triangle (inverted) -->
+  <path d="M16 8L12 18L20 18L16 8Z" fill="#004AAD"/>
+</svg> 
