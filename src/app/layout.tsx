@@ -1,6 +1,5 @@
 import React from 'react';
 import { IBM_Plex_Sans } from 'next/font/google';
-import './globals.css';
 import ThemeRegistry from '../theme/ThemeRegistry';
 import { RoleProvider } from '@/context/RoleContext';
 import { AuthProvider } from '@/context/AuthContext';
@@ -23,7 +22,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={ibmPlexSans.className}>
+      <body className={ibmPlexSans.className} style={{ backgroundColor: '#f5f5f0', margin: 0, padding: 0 }}>
         <ThemeRegistry>
           <AuthProvider>
             <RoleProvider>

@@ -218,8 +218,8 @@ CREATE OR REPLACE FUNCTION oauth_login(
     p_provider_user_id VARCHAR,
     p_email VARCHAR,
     p_name VARCHAR,
-    p_avatar_url VARCHAR DEFAULT NULL,
     p_access_token TEXT,
+    p_avatar_url VARCHAR DEFAULT NULL,
     p_refresh_token TEXT DEFAULT NULL,
     p_token_expires_at TIMESTAMP WITH TIME ZONE DEFAULT NULL
 ) RETURNS TABLE(

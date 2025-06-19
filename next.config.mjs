@@ -3,9 +3,7 @@ const nextConfig = {
     eslint: {
       ignoreDuringBuilds: true,
     },
-    experimental: {
-      optimizeFonts: true,
-    },
+    serverExternalPackages: ['bcrypt', 'jsonwebtoken'],
   };
   
   export default nextConfig;

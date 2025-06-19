@@ -229,7 +229,7 @@ export async function POST(request: NextRequest) {
           created_at,
           updated_at
         ) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, NOW(), NOW()) 
-        RETURNING id, site_id`,
+        RETURNING id, site_uuid`,
         [
           name,
           description || '',
@@ -251,7 +251,7 @@ export async function POST(request: NextRequest) {
       }
       
       const newSiteId = result.rows[0].id;
-      const siteUuid = result.rows[0].site_id;
+      const siteUuid = result.rows[0].site_uuid;
       
       // Site configuration oluştur
       await pool.query(
@@ -429,7 +429,7 @@ export async function POST(request: NextRequest) {
           s.language,
           s.created_at,
           s.last_deployed_at,
-          s.site_id,
+          s.site_uuid,
           u.name as owner_name,
           t.name as team_name,
           f.name as framework_name,
@@ -456,7 +456,7 @@ export async function POST(request: NextRequest) {
         message: 'Site başarıyla oluşturuldu',
         site: {
           id: site.id,
-          uuid: site.site_id,
+          uuid: site.site_uuid,
           name: site.name,
           description: site.description,
           subdomain: site.subdomain,
